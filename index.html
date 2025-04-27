@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uniglobe 留学サポート</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #e0f7fa; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+    header { background-color: #0fb8cf; color: white; display: flex; align-items: center; justify-content: center; padding: 1em 2em; flex-direction: column; text-align: center; }
+    .logo { margin-bottom: 10px; }
+    .logo img { max-width: 80px; }
+    .tagline { font-size: 1.5em; font-family: "黎ミン L", "Poppins", sans-serif; }
+    .tagline strong { font-size: 2em; display: block; margin-bottom: 0.2em; }
+    nav { background-color: rgba(77, 182, 172, 0.95); display: flex; flex-wrap: wrap; justify-content: center; padding: 1em 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.2); backdrop-filter: blur(5px); }
+    nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; padding: 0.5em; transition: background 0.3s; }
+    nav a:hover { background-color: #00796b; border-radius: 5px; }
+    section { padding: 4em 2em; max-width: 1000px; margin: auto; }
+    section:nth-child(even) { background-color: #ffffff; }
+    h2 { color: #00796b; text-align: center; margin-bottom: 1em; }
+    img { width: 100%; height: auto; margin-top: 1em; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .support-block { display: flex; align-items: center; gap: 20px; margin-bottom: 3em; flex-wrap: wrap; }
+    .support-title { background-color: #aed581; border-radius: 15px; padding: 1em 2em; min-width: 200px; min-height: 80px; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; color: #333; }
+    ul { list-style-type: disc; padding-left: 1.5em; margin: 0; flex: 1; }
+    .price-plan { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 2em; }
+    .price-card { background-color: #ffffff; border: 2px solid #aed581; border-radius: 15px; width: 280px; padding: 1.5em; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+    .price-card h3 { margin-top: 0; color: #00796b; }
+    .price { font-size: 1.8em; color: #4caf50; margin: 0.5em 0; }
+    .price-card ul { list-style: none; padding: 0; text-align: left; }
+    .price-card ul li { margin-bottom: 0.5em; }
+    .price-card button { background-color: #aed581; color: black; border: none; padding: 10px 20px; margin-top: 1em; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+    .price-card button:hover { background-color: #9ccc65; }
+    .qa-item { margin-bottom: 2em; }
+    .qa-question { font-weight: bold; color: #00796b; margin-bottom: 0.5em; }
+    .qa-answer { margin-left: 1em; }
+    .testimonial { margin-bottom: 2em; padding: 1.5em; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .testimonial p { margin: 0; }
+    .testimonial strong { display: block; margin-top: 1em; color: #00796b; }
+    @media (max-width: 768px) {
+      body {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .price-plan { flex-direction: column; align-items: center; }
+      .price-card { width: 90%; margin-bottom: 20px; }
+      nav a {
+        font-size: 14px;
+        padding: 0.8em;
+      }
+      .support-block {
+        flex-direction: column;
+        align-items: center;
+      }
+      .qa-answer {
+        display: block;
+        margin-left: 0;
+      }
+    }
+    .qa-item .qa-answer {
+      display: none;  /* 初期状態では非表示 */
+      margin-left: 1em;
+      opacity: 0;
+      transform: translateY(20px);  /* 初期状態で少し下に配置 */
+      transition: all 0.4s ease-in-out;  /* アニメーションのスムーズなトランジション */
+    }
+
+    .qa-item:hover .qa-answer {
+      display: block;  /* ホバー時に表示 */
+      opacity: 1;      /* 徐々に透明度が上がる */
+      transform: translateY(0);  /* 少し上にスライドして表示される */
+    }
+    footer {
+  background-color: #0fb8cf;
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="images/IMG_0135.JPG" alt="Uniglobe ロゴ">
+  </div>
+  <div class="tagline">
+    <strong>Uniglobe</strong>
+    海外チャレンジから未来設計まで。留学経験者と創る、安心のUniglobe
+  </div>
+</header>
+<nav>
+  <a href="#about">Uniglobeとは？</a>
+  <a href="#strength">弊社の強み</a>
+  <a href="#support">サポート内容</a>
+  <a href="#price">料金プラン</a>
+  <a href="#voices">体験者の声</a>
+  <a href="#qa">Q&A</a>
+  <a href="#contact">お問い合わせ</a>
+</nav>
+<section id="about">
+  <h2>Uniglobeとは？</h2>
+  <p>私たちUniglobeは、留学経験者によるトータルサポートを提供する留学エージェンシーです。</p>
+  <p><span class="quote">「挑戦することへの不安を減らし、未来をもっと自由に、もっと自分らしく」</span></p>
+  <p>そんな思いで、中高生・大学生・社会人の海外チャレンジをサポートしています。</p>
+  <p>主にアメリカ、カナダ、ニュージーランド、スイスなどを中心に、スポーツ留学、進学留学、専門留学など幅広いプログラムに対応。スタッフ全員が留学を経験しているからこそ、リアルな視点で、出発前から帰国後まで一人ひとりに寄り添います。</p>
+  <p>学校選びから渡航準備、現地生活サポート、帰国後の進路相談まで、留学のすべてをサポート。Uniglobeは、あなたの「海外チャレンジ」を安心とともに支えます。</p>
+  <img src="images/IMG_0134.JPG" alt="大学の写真1">
+</section>
+<section id="strength">
+  <h2>弊社の強み</h2>
+  <p>Uniglobeは、スタッフ全員が自身の留学経験を活かし、リアルな視点でサポートを行う留学エージェンシーです。</p>
+  <p>単なる手続き代行ではなく、留学前・留学中・留学後を一貫して支える「トータルサポート」を強みとしています。</p>
+  <p>特に、進学留学に加え、スポーツなどの専門技能を活かした留学支援に力を入れており、NCAA本気志望者向け専門サポートを提供しています。スタッフは、NCAAや全米大会で活躍した元大学アスリート。現場を知り尽くしたプロが、現地大学との強力なコネクションを活かし、他にはないリクルートチャンスを実現します。</p>
+  <p>現地での生活やトラブル対応、帰国後の進学・就職サポートまで、体制を整えています。</p>
+  <p>さらに、24時間対応の緊急サポートや、留学経験者同士のネットワーク作り（OBOGコミュニティ）の運営など、渡航後も安心していただける仕組みを整えています。</p>
+  <img src="images/8848686.jpg" alt="弊社の強みイメージ">
+</section>
+
+<section id="support">
+  <h2>サポート内容</h2>
+  <div class="support-block">
+    <div class="support-title">【留学前サポート】</div>
+    <ul>
+      <li>初回カウンセリング（希望のヒアリング）</li>
+      <li>留学プラン個別提案（進学、スポーツ留学）</li>
+      <li>学校・プログラム選定アドバイス</li>
+      <li>出願書類・翻訳サポート</li>
+      <li>渡航支援・滞在先手配</li>
+      <li>英語力強化</li>
+    </ul>
+  </div>
+  <div class="support-block">
+    <div class="support-title">【留学中サポート】</div>
+    <ul>
+      <li>現地生活アドバイス</li>
+      <li>健康・法律トラブル対応</li>
+      <li>定期フォローアップ（オンライン相談）</li>
+      <li>24時間緊急サポート</li>
+      <li>現地スタッフ連携</li>
+    </ul>
+  </div>
+  <div class="support-block">
+    <div class="support-title">【留学後サポート】</div>
+    <ul>
+      <li>帰国後進路相談（編入・進学・資格取得）</li>
+      <li>就職活動支援（履歴書・面接対策）</li>
+      <li>キャリア設計アドバイス</li>
+      <li>OBOGコミュニティ招待</li>
+      <li>メンター制度運営</li>
+    </ul>
+  </div>
+</section>
+
+<section id="price">
+  <h2>料金プラン</h2>
+  <div class="price-plan">
+    <div class="price-card">
+      <h3>ベーシックプラン</h3>
+      <p>学校選び・出願準備中心</p>
+      <p><strong>例：100,000円〜</strong></p>
+      
+    </div>
+    <div class="price-card">
+      <h3>スタンダードプラン</h3>
+      <p>出願＋渡航準備＋現地サポート付き</p>
+      <p><strong>例：200,000円〜</strong></p>
+      
+    </div>
+    <div class="price-card">
+      <h3>プレミアムプラン</h3>
+      <p>留学前後トータルサポート＋帰国後キャリア支援付き＋エッセイ作成</p>
+      <p><strong>例：300,000円〜</strong></p>
+      
+    </div>
+    <div class="price-card">
+      <h3>スポーツ留学特別プラン</h3>
+      <p>スポーツチーム手配＋学校出願＋サポート</p>
+      <p><strong>個別見積もり</strong></p>
+      
+    </div>
+  </div>
+</section>
+
+<section id="voices">
+  <h2>体験者の声</h2>
+  <div class="testimonial">
+    <p>「リアルタイムな海外情報で不安なく留学生活をスタートできました！」</p>
+    <strong>— イリノイ大学卒業・Kさん</strong>
+  </div>
+  <div class="testimonial">
+    <p>「スポーツだけでなく、学業面や生活面まで細かくアドバイスしてもらえたので、安心して挑戦できました。スタッフが元アスリートなのが大きかったです。」</p>
+    <strong>— Knox大学在学・Bさん</strong>
+  </div>
+  <div class="testimonial">
+    <p>「息子にあった高校をピンポイントで紹介してもらえたのが本当に大きかったです。渡航前に学校のリアルな雰囲気や生徒たちの人柄を知れたので安心して送り出すことができました！」</p>
+    <strong>— Blue Ridge School在校・Hさんの親御さん</strong>
+  </div>
+  <div class="testimonial">
+    <p>「音楽留学を急遽決めたにもかかわらず、短期間で出願準備から学校との交渉、現地での生活サポートまで全て整えてもらいました。演奏動画の作成やエッセイ指導も迅速かつ的確で、安心して留学に踏み出せました。」</p>
+    <strong>— Musicians Institute在学・Sさん</strong>
+  </div>
+</section>
+
+<section id="qa">
+  <h2>Q&A</h2>
+  <div class="qa-item">
+    <div class="qa-question">Q. 留学の相談は無料ですか？</div>
+    <div class="qa-answer">A. 初回カウンセリングは無料で承っております。公式LINEアカウントからお気軽にご相談ください。</div>
+  </div>
+  <div class="qa-item">
+    <div class="qa-question">Q. 英語が得意ではないのですが大丈夫ですか？</div>
+    <div class="qa-answer">A. 大丈夫です！語学力に合わせたプラン提案や語学学校の紹介も行っています。</div>
+  </div>
+  <div class="qa-item">
+    <div class="qa-question">Q.留学費用はどれくらいかかりますか？</div>
+    <div class="qa-answer">A. 渡航先、学校、滞在形態によって大きく異なりますが、事前に見積もりを作成し、無理のないプランを一緒に考えます。奨学金情報もサポートします。</div>
+  </div>
+  <div class="qa-item">
+    <div class="qa-question">Q. いつから準備を始めるべきですか？</div>
+    <div class="qa-answer">A. 目安は出発の1年前。ただし、直前でも間に合わせた実績もありますので、まずはご相談ください。</div>
+  </div>
+  <div class="qa-item">
+    <div class="qa-question">Q. 進路を変更したくなった場合はどうなりますか？</div>
+    <div class="qa-answer">A.  途中で進路変更が必要になった場合も、柔軟に対応できるようサポート体制を整えています。転校、休学、帰国手続きなどもお手伝いします。</div>
+  </div>
+  <div class="qa-item">
+    <div class="qa-question">Q.  保護者へのサポートはありますか？</div>
+    <div class="qa-answer">A. あります。定期的なレポート提出、緊急連絡体制など、保護者向けの情報提供も充実しています。</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>お問い合わせ</h2>
+  <p style="text-align: center;">留学に関するご質問やご相談は、LINEまたはメールからお気軽にお問い合わせください。</p>
+
+  <div style="text-align: center; margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+    <a href="https://lin.ee/uBWtUHy" target="_blank" style="background-color:#00c300; color:white; padding:10px 27px; border-radius:5px; font-weight:bold; text-decoration:none; display:inline-block;">LINEで相談する</a>
+
+    <a href="mailto:uniglobe.jp@gmail.com" style="background-color:#00796b; color:white; padding:10px 20px; border-radius:5px; font-weight:bold; text-decoration:none; display:inline-block;">メールで相談する</a>
+  </div>
+</section>
+
+
+
+<footer style="text-align:center; padding:2em 0;">
+  <a href="privacy.html" style="color:#00796b; text-decoration:underline;">個人情報保護方針</a>
+</footer>
+
+
